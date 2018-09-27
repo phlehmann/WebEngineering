@@ -6,7 +6,6 @@ if(!isset($_SESSION['login_user']))      // if there is no valid session
 {
         header("Location: login.php");
 }
-echo session_id();
 ?>
 <html>
 	<head>
