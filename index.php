@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <?php
-	session_start();
-	session_regenerate_id();
-	if(!isset($_SESSION['login_user']))      // if there is no valid session
-	{
-		header("Location: login.php");
-	}
-	echo session_id();
+session_start();
+session_regenerate_id();
+if(!isset($_SESSION['login_user']))      // if there is no valid session
+{
+        header("Location: login.php");
+}
+echo session_id();
 ?>
 <html>
 	<head>
