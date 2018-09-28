@@ -45,7 +45,8 @@ if(!isset($_SESSION['login_user']))      // if there is no valid session
 	<body>
 		<div id="main">
 			<div id="menu">
-				<a href="logout.php"><div id="btn_logout">Logout</div></a>
+                                <a href="#"><div class="menu_buttons" id="btn_homepage">Homepage</div></a>
+				<a href="logout.php"><div class="menu_buttons" id="btn_logout">Logout</div></a>
 			</div>
 			<div id="left-select">
 				<form action="#">

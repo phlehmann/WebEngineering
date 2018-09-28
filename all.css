@@ -72,30 +72,41 @@ body {
 	position:relative;
 }
 
+.menu_buttons {
+    background-color:grey;
+    height: 40px;
+    width: 100px;
+    text-align:center;
+}
+
+#btn_homepage{
+    position:relative;	
+}
+
 #btn_logout{
-	background-color:grey;
-	height: 40px;
-	width: 100px;
+    position:relative;
+    left:120px;
+    top:-40px;
 }
 
 #left-select {
-	height: 100px;
-	width: 300px;
-	position:relative;
+    height: 100px;
+    width: 300px;
+    position:relative;
 }
 
 #center-select {
-	height: 100px;
-	width: 300px;
-	position:relative;
-	top:-100px;
-	left:300px;
+    height: 100px;
+    width: 300px;
+    position:relative;
+    top:-100px;
+    left:300px;
 }
 
 #right-select {
-	height: 100px;
-	width: 300px;
-	position:relative;
-	top:-200px;
-	left:600px;
+    height: 100px;
+    width: 300px;
+    position:relative;
+    top:-200px;
+    left:600px;
 }
