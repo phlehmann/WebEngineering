@@ -9,7 +9,8 @@
 				<input type="email" id="textbox_username" class="textboxes" name="username" placeholder="username" required autofocus></br>
 				<input type = "password" id="textbox_password" class="textboxes" name="password" placeholder="password" required><br>
 				<a id="link_pwvergessen" href="#" onclick="doSomething();">Forgot password?</a>
-				<button type="submit" id="btn_login" name="login">Login</button>
+                                
+                                <button type="submit" id="btn_login" name="login">Login</button>
 			</form>
 		</div>
 	</body>

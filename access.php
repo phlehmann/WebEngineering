@@ -18,10 +18,10 @@
          header("location: index.php");
     }else {
         echo "
-			<script type=\"text/javascript\">
-			alert('Username or Password invalid');
-			window.location.replace('login.php');
-			</script>
+            <script type=\"text/javascript\">
+            alert('Username or Password invalid');
+            window.location.replace('login.php');
+            </script>
         ";
     }
 	
