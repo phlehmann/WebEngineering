@@ -3,10 +3,10 @@ body {
 }
 
 #login_box {
-	background-color:#ffffff;
-	height: 200px;
-	width: 200px;
-	position:absolute;
+    background-color:#ffffff;
+    height: 200px;
+    width: 200px;
+    position:absolute;
     top:50%;
     left:50%;
     margin-left:-100px;

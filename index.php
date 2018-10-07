@@ -10,7 +10,7 @@ if(!isset($_SESSION['login_user']))      // if there is no valid session
 <html>
 	<head>
 		<title>HomePage</title>
-		<link rel="stylesheet" type="text/css" href="all.css">
+                <link rel="stylesheet" type="text/css" href="stylesheet/all.css">
 		
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">

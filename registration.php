@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>Registration</title>
-		<link rel="stylesheet" type="text/css" href="all.css">
+                <link rel="stylesheet" type="text/css" href="stylesheet/all.css">
 	</head>
 	<body>
 		<div id="login_box">
