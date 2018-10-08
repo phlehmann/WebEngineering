@@ -1,5 +1,5 @@
 <?php
-    include("connectdb.php");
+    include("DBconnection.inc.php");
     session_start();
 
     // get user data from login area
