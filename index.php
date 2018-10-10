@@ -44,38 +44,52 @@ if(!isset($_SESSION['login_user']))      // if there is no valid session
 	</head>
 	<body>
 		<div id="main">
-			<div id="menu">
-                                <a href="#"><div class="menu_buttons" id="btn_homepage">Homepage</div></a>
-				<a href="logout.php"><div class="menu_buttons" id="btn_logout">Logout</div></a>
-			</div>
-			<div id="left-select">
-				<form action="#">
-					<fieldset>
-						<label for="speed">Select a school</label>
-						<select name="speed" id="speed">
-							<option>Slower</option>
-							<option>Slow</option>
-							<option selected="selected">Medium</option>
-							<option>Fast</option>
-							<option>Faster</option>
-						</select>
-					</fieldset>
-				</form>
-			</div>
-			<div id="center-select">
-				<form action="#">
-					<fieldset>
-						<label for="files">Select a course</label>
-						<select name="files" id="files">
-							<option>Slower</option>
-							<option>Slow</option>
-							<option selected="selected">Medium</option>
-							<option>Fast</option>
-							<option>Faster</option>
-						</select>
-					</fieldset>
-				</form>
-			</div>	
+                    <div id="menu">
+                            <a href="#"><div class="menu_buttons" id="btn_homepage">Homepage</div></a>
+                            <a href="logout.php"><div class="menu_buttons" id="btn_logout">Logout</div></a>
+                    </div>
+                    <div id="list">
+                        <?php
+                            include("DBconnection.inc.php");
+
+                             // get database user
+                            $sql = "SELECT * FROM classes";
+                            $result = $conn->query($sql);
+
+                            $count = mysqli_num_rows($result);
+
+                        ?>
+
+                        <table style='width:100%'>
+                            <tr>
+                              <th>Universität</th>
+                              <th>Modul</th> 
+                              <th>Anzahl Semester</th>
+                            </tr>
+
+                            <?php
+                            for($i=1; $i <= $count; $i++){
+                                $row = $result->fetch_array(1);
+                            ?>
+
+                            <tr>
+                                <td><?php echo $row['ClassName'] ?></td>
+                                <td><?php echo $row['Degree'] ?></td> 
+                                <td><?php echo $row['TotSemesters'] ?></td>
+                            </tr>
+
+                            <?php
+                            }
+                            ?>
+                        </table>
+
+
+                        <?php
+                        $conn->close();
+                        ?>
+                    </div>
+                    
+                    
 		</div>
 	</body>
 </html>

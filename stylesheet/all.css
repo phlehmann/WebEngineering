@@ -70,6 +70,8 @@ body {
     margin-top:-200px;
 }
 
+/* MENU */
+
 #menu{
 	background-color:#b5b5b5;
 	height:60px;
@@ -94,24 +96,16 @@ body {
     top:-40px;
 }
 
-#left-select {
-    height: 100px;
-    width: 300px;
-    position:relative;
+/* List */
+#list{
+    width: 800px;
+    height: 180px;
+    overflow-y: scroll;
 }
 
-#center-select {
-    height: 100px;
-    width: 300px;
+#div1{
+    background-color: yellow;
     position:relative;
-    top:-100px;
-    left:300px;
-}
-
-#right-select {
-    height: 100px;
-    width: 300px;
-    position:relative;
-    top:-200px;
-    left:600px;
+    width:100px;
+    height:100px;
 }
