@@ -13,57 +13,69 @@ body {
     margin-top:-100px;
 }
 
-.textboxes {
-	position:absolute;
-	width:180px;
-	height:30px;
-	left:50%;
-    margin-left:-90px;
+#registration_box {
+    background-color:#ffffff;
+    height: 300px;
+    width: 390px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-195px;
+    margin-top:-150px;
 }
 
-#textbox_username {
-	top:10px;
+
+.textboxes_left {
+    position:relative;
+    width:180px;
+    height:30px;
+    margin-top:10px;
+    margin-left:10px;
 }
 
-#textbox_password {
-	top:50px;
+.textboxes_right{
+    position:relative;
+    width:180px;
+    height:30px;
+    margin-top:-30px;
+    margin-left:200px;
 }
 
-#textbox_password2{
-        top:90px;
+#textbox_ort {
+    margin-top:10px;
 }
 
 #btn_login {
-	position:absolute;
-	bottom:10px;
-	width:60px;
-	height:30px;
-	left:50%;
-        margin-left:-30px;
+    position:absolute;
+    bottom:10px;
+    width:60px;
+    height:30px;
+    left:50%;
+    margin-left:-30px;
 }
 
 #btn_reset {
-	position:absolute;
-	bottom:10px;
-	width:60px;
-	height:30px;
-	left:50%;
-        margin-left:-30px;
+    position:absolute;
+    bottom:10px;
+    width:60px;
+    height:30px;
+    left:50%;
+    margin-left:-30px;
 }
 
 #link_pwvergessen{
-	position:absolute;
-	top:85px;
-	right:10px;
-	font-size:12px;
+    position:absolute;
+    top:85px;
+    right:10px;
+    font-size:12px;
 }
 
 /** HomePage **/
 #main {
-	background-color:#ffffff;
-	height: 400px;
-	width: 900px;
-	position:absolute;
+    background-color:#ffffff;
+    height: 400px;
+    width: 900px;
+    position:absolute;
     top:50%;
     left:50%;
     margin-left:-450px;

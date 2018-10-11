@@ -2,7 +2,7 @@
     $dbHost = "127.0.0.1";		//Location Of Database
     $dbUser = "root";			//Database User Name 
     $dbPass = "";				//Database Password 
-    $dbDatabase = "test3";		//Database Name
+    $dbDatabase = "webengdb";		//Database Name
 
     // Create connection
     $conn = new mysqli($dbHost, $dbUser, $dbPass, $dbDatabase);

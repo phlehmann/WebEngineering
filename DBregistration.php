@@ -6,10 +6,14 @@
     $myusername = $_POST['username'];
     $mypassword = $_POST['password'];
     $mypassword2 = $_POST['password2'];
+    $myschool = $_POST['institut'];
+    $myaddress = $_POST['strasse'];
+    $mycity = $_POST['ort'];
+    $myplz = $_POST['plz'];
     $encrypt = md5($mypassword);
 
     if(isset($myusername)){
-        $sql = "SELECT username FROM users WHERE username = '$myusername'";
+        $sql = "SELECT email FROM benutzerkonto WHERE email = '$myusername'";
         $result = $conn->query($sql);
         $count = mysqli_num_rows($result);
         if($count == 1) {
@@ -21,10 +25,13 @@
             ";
         }else{
             if($mypassword == $mypassword2){
-                $sql = "INSERT INTO users (username, password)
+                $sql = "INSERT INTO benutzerkonto (email, passwort)
                         VALUES ('$myusername', '$encrypt')";
+                
+                $sql2 = "INSERT INTO bildungsinstitut (Name, Strasse, Ort, Postleitzahl)
+                        VALUES ('$myschool', '$myaddress', '$mycity', '$myplz')";
 
-                if ($conn->query($sql) === TRUE) {
+                if ($conn->query($sql) === TRUE AND $conn->query($sql2) === TRUE) {
                     echo "
                         <script type=\"text/javascript\">
                         alert('User successfully created');
