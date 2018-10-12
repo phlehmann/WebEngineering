@@ -4,6 +4,7 @@
         "home" => "Startseite",
         "about" => "Über uns",
         "contact" => "Kontakt",
+        "logout" => "Abmelden",
         "english" => "Englisch",
         "german" => "Deutsch"
     );  

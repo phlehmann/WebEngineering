@@ -1,5 +1,6 @@
 body {
 	background-color:#5b5b5b;
+        margin:0;
 }
 
 #login_box {
@@ -70,20 +71,7 @@ body {
     font-size:12px;
 }
 
-/** HomePage **/
-#main {
-    background-color:#ffffff;
-    height: 400px;
-    width: 900px;
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin-left:-450px;
-    margin-top:-200px;
-}
-
 /* MENU */
-
 nav{
     background-color:#b5b5b5;
     height:60px;
@@ -91,28 +79,35 @@ nav{
     position:relative;
 }
 
-.menu_buttons {
-    background-color:grey;
-    height: 40px;
-    width: 100px;
-    text-align:center;
-}
-
-#btn_homepage{
-    position:relative;	
-}
-
-#btn_logout{
+nav .nav-link{
     position:relative;
-    left:120px;
-    top:-40px;
+    background-color:white;
+    width:80px;
+    height:30px;
+    float:left;
+    left:300px;
+    margin:5px;
+    text-align: center;
+    text-height: 30px;
+}
+
+nav .nav-lang{
+    position:relative;
+    background-color:white;
+    width:80px;
+    height:30px;
+    float:left;
+    left:300px;
+    margin:5px;
+    text-align: center;
+    text-height: 30px;
 }
 
 .footer{
-                left:0;
-                position:fixed;
-                bottom:0;
-                text-align:center;
-                color:white;
-                width:100%;
-            }
+    left:0;
+    position:fixed;
+    bottom:0;
+    text-align:center;
+    color:white;
+    width:100%;
+}

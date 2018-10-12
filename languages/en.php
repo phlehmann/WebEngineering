@@ -4,6 +4,7 @@
         "home" => "Home",
         "about" => "About",
         "contact" => "Contact",
+        "logout" => "Logout",
         "english" => "English",
         "german" => "German"
     );  
