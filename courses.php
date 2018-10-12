@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <title> DB-Bearbeitung l&ouml;schen, editieren und erfassen in einem File </title>
-  <link rel="stylesheet" type="text/css" href="userprofile.css">
+  <link rel="stylesheet" type="text/css" href="courses.css">
 
 <script type="text/javascript">
 function send(ak,id)
@@ -93,7 +93,7 @@ function send(ak,id)
    }
 
    /* Formular-Beginn */
-   echo "<form name='f' action='userprofile.php'
+   echo "<form name='f' action='courses.php'
                method='post'>";
    echo "<input name='ak' type='hidden' />";
    echo "<input name='id' type='hidden' />";
