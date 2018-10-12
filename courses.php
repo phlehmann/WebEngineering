@@ -4,6 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <title> DB-Bearbeitung l&ouml;schen, editieren und erfassen in einem File </title>
   <link rel="stylesheet" type="text/css" href="courses.css">
+  <link rel="stylesheet" type="text/css" href="all.css">
 
 <script type="text/javascript">
 function send(ak,id)

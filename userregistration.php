@@ -2,6 +2,7 @@
 	<head>
 		<title>Registration</title>
                 <link rel="stylesheet" type="text/css" href="stylesheet/test.css">
+                <link rel="stylesheet" type="text/css" href="all.css">
 	</head>
 	<body>
                 <div id="header">
