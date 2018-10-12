@@ -3,12 +3,12 @@
     session_start();
 
     // get user data from login area
-    $myusername = $_REQUEST['username'];
+    $myusername = $_REQUEST['email'];
     $mypassword = $_REQUEST['password'];
     $encrypt = md5($mypassword);
 
     // get database user
-    $sql = "SELECT id,username,password FROM users WHERE username = '$myusername' AND password = '$encrypt'";
+    $sql = "SELECT email,passwort FROM benutzerkonto WHERE email = '$myusername' AND passwort = '$encrypt'";
     $result = $conn->query($sql);
 
     $count = mysqli_num_rows($result);
