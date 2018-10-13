@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php 
-    include 'languageSession.php';
+    include 'includes/languageSession.inc.php';
 ?>
 <html lang="en">
     <head>
@@ -9,14 +9,15 @@
         <link rel="stylesheet" type="text/css" href="stylesheet/all.css">
     </head>
     <body>
-        <nav class="navbar">
+        <nav>
             <div class="nav-link"><a href="#"><?php echo $lang['home']?></a></div>
             <div class="nav-link"><a href="#"><?php echo $lang['about']?></a></div>
             <div class="nav-link"><a href="#"><?php echo $lang['contact']?></a></div>
-            <div class="nav-link"><a href="logout.php"><?php echo $lang['logout']?></a></div>
-
-            <div class="nav-lang"><a href="index.php?lang=en"><?php echo $lang['english']?></a></div>
-            <div class="nav-lang"><a href="index.php?lang=de"><?php echo $lang['german']?></a></div>
+            <div class="nav-link"><a href="login.php"><?php echo $lang['login']?></a></div>
         </nav>
+        <footer>
+            <div class="footer lang"><a href="index.php?lang=en"><?php echo $lang['english']?></a></div>
+            <div class="footer lang"><a href="index.php?lang=de"><?php echo $lang['german']?></a></div>
+        </footer>
     </body>
-</html>
+</html> 

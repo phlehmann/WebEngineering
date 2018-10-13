@@ -2,7 +2,7 @@
 Author: Philipp Lehmann
 -->
 <?php
-    include("DBconnection.inc.php");
+    include("includes/DBconnection.inc.php");
     session_start();
 
     // get user data from login area

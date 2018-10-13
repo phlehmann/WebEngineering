@@ -8,8 +8,9 @@ URL: https://www.youtube.com/watch?v=cgvDMUrQ3vA
         "home" => "Home",
         "about" => "About",
         "contact" => "Contact",
+        "login" => "Login",
         "logout" => "Logout",
-        "english" => "English",
-        "german" => "German"
+        "english" => "En",
+        "german" => "Ge"
     );  
 ?>
