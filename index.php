@@ -1,3 +1,6 @@
+<!--
+author: René Schwab
+-->
 <!DOCTYPE html>
 <?php 
     include 'includes/languageSession.inc.php';
@@ -11,8 +14,7 @@
     <body>
         <nav>
             <div class="nav-link"><a href="#"><?php echo $lang['home']?></a></div>
-            <div class="nav-link"><a href="#"><?php echo $lang['about']?></a></div>
-            <div class="nav-link"><a href="#"><?php echo $lang['contact']?></a></div>
+            <div class="nav-link"><a href="#"><?php echo $lang['profile']?></a></div>
             <div class="nav-link"><a href="login.php"><?php echo $lang['login']?></a></div>
         </nav>
         <footer>
