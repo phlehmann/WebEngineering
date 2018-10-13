@@ -14,6 +14,7 @@
                                 <input type="text" class="textboxes_right" name="ort" placeholder="Ort" required autofocus>
                                 <input type="text" id="textbox_ort" class="textboxes_right" name="plz" placeholder="plz" required autofocus>
                                 <button type="submit" id="btn_login" name="Register">Login</button>
+                                <button type="reset" id="btn_reset" name="Register">Reset</button>
 			</form>
 		</div>
 	</body>

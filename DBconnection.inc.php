@@ -1,3 +1,6 @@
+<!-- 
+Author: Philipp Lehmann
+-->
 <?php
     $dbHost = "127.0.0.1";		//Location Of Database
     $dbUser = "root";			//Database User Name 

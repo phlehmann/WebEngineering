@@ -1,3 +1,6 @@
+<!-- 
+Author: Philipp Lehmann
+-->
 <?php
     include("DBconnection.inc.php");
     session_start();

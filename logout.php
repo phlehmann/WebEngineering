@@ -1,3 +1,6 @@
+<!-- 
+Author: Philipp Lehmann
+-->
 <?php
 	// opens current session
 	session_start();

@@ -1,3 +1,8 @@
+<!-- 
+Author: Philipp Lehmann
+URL: https://www.youtube.com/watch?v=cgvDMUrQ3vA
+-->
+
 <?php
     session_start();
     
