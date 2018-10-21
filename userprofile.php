@@ -41,7 +41,7 @@ author: Bodo Grütter
             ."</table>";
             echo "</form>";
             
-            $update = "Update bildungsinstitut set Name = '$name', Strasse = '$strasse', Ort = '$ort', Postleitzahl = '$plz', email = '$email'";
+            $update = "Update bildungsinstitut set `Name` = '$name', `Strasse` = '$strasse', `Ort` = '$ort', `Postleitzahl` = '$plz', `email` = '$email'";
             mysqli_query($conn, $update);
             mysqli_close($conn);
         ?>
