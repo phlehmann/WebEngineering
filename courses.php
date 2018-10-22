@@ -16,11 +16,7 @@
             <div class="row">
                 <h3>PHP CRUD Grid</h3>
             </div>
-            <div class="row">
-                <p>
-                    <a href="create.php" class="btn btn-success">Create</a>
-                </p>
-                 
+            <div class="row">              
                 <table class="table table-striped table-bordered">
                       <thead>
                         <tr>
@@ -34,6 +30,7 @@
                           <th>Bildungsinstitut</th>
                           <th>Fachbereich</th>
                           <th>Abschluss</th>
+                          <th><a href="create.php" class="btn btn-success"><img border='0' alt='edit' src='images/add.png' height='20' width='20'></a></th>
                         </tr>
                       </thead>
                       <tbody>
@@ -54,8 +51,8 @@
                                 . "<td><input name='bildungsinstitut[$id]' value='" . $row['FK_Bildungsinstitut'] . "' size='10' /></td>"
                                 . "<td><input name='fachbereich[$id]' value='" . $row['FK_Fachbereich'] . "' size='10' /></td>"
                                 . "<td><input name='abschluss[$id]' value='" . $row['FK_Abschluss'] . "' size='10' /></td>"
-                                . "<td><a href='javascript:send(1,$id);'>&auml;ndern</a>"
-                                . " <a href='javascript:send(2,$id);'>l&ouml;schen</a></td>"
+                                . "<td><a class='btn btn-success' href='coursesUpdate.php?id='".$id."'><img border='0' alt='edit' src='images/edit.png' height='20' width='20'></a>"
+                                . "<a class='btn btn-danger' href='coursesDelete.php?id='".$id."'><img border='0' alt='edit' src='images/delete.jpg' height='20' width='20'></a></td>"
                                 . "</tr>";
                        }
                       ?>
