@@ -10,6 +10,17 @@ URL: https://www.youtube.com/watch?v=cgvDMUrQ3vA
         "login" => "Anmelden",
         "logout" => "Abmelden",
         "english" => "En",
-        "german" => "De"
+        "german" => "De",
+        "myCourses" => "Meine Kurse",
+        "label" => "Bezeichnung",
+        "costs" => "Kosten",
+        "attendance" => "Teilnehmerzahl",
+        "startingDate" => "Startdatum",
+        "endDate" => "Enddatum",
+        "place" => "Ort",
+        "educationalInstitute" => "Bildungsinstitut",
+        "areaOfStudies" => "Fachbereich",
+        "graduation" => "Abschluss",
+        "addCourse" => "Kurs hinzufügen"
     );  
 ?>

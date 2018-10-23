@@ -1,6 +1,4 @@
-<?php
-    $id = 0;
-     
+<?php   
     if ( !empty($_GET['id'])) {
         $id = $_REQUEST['id'];
     }
@@ -12,19 +10,19 @@
         // delete data
         include("includes/DBconnection.inc.php");
         mysqli_query($conn, "SET NAMES 'utf8'"); // ä, ö, ü richtig darstellen
-        $update = "DELETE FROM bildungsangebot  WHERE ID = ?";
-        $q = $conn->prepare($update);
-        $q->execute(array($id));
-        header("Location: index.php");
-         
+        $update = "DELETE FROM bildungsangebot  WHERE ID = ".$id;
+        mysqli_query($conn, "DELETE FROM bildungsangebot  WHERE ID = ".$id);
+        echo $id;
+        header("Location: courses.php");
     }
+    
 ?>
  
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link   href="css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="stylesheet/courses.css">
     <script src="js/bootstrap.min.js"></script>
 </head>
  
@@ -40,8 +38,8 @@
                       <input type="hidden" name="id" value="<?php echo $id;?>"/>
                       <p class="alert alert-error">Are you sure to delete ?</p>
                       <div class="form-actions">
-                          <button type="submit" class="btn btn-danger">Yes</button>
-                          <a class="btn" href="courses.php">No</a>
+                          <button type="submit" class="button">Yes</button>
+                          <a class="button" href="courses.php">No</a>
                         </div>
                     </form>
                 </div>

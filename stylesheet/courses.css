@@ -1,9 +1,25 @@
-body,td {font-family:Verdana; font-size:10pt;
-      color:#636363; background-color:#d3d3d3}
-a:link       {color:#636363}
-a:visited    {color:#636363}
-a:hover      {color:#636363; background-color:#a3a3a3}
+body,td {font-family:Verdana; font-size:10pt;}
 
 .text{
-    width: 100px;
+    width: 100%;
+}
+
+img{
+    margin-right: 5px;
+}
+
+th{
+    text-align: left;
+}
+
+.button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
 }
