@@ -118,6 +118,11 @@ nav .nav-link{
     text-align: center;
 }
 
+nav .nav-link:hover{
+    background-color:yellow;
+}
+
+
 /* Footer */
 footer{
     background-color:white;

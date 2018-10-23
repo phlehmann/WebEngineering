@@ -9,6 +9,6 @@ Author: Philipp Lehmann
 	session_destroy();
 	
 	// redirects to login area
-	header('Location: login.php');
+	header('Location: index.php');
 	exit;
 ?>
