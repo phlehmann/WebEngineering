@@ -3,7 +3,7 @@ author: René Schwab
 -->
 <!DOCTYPE html>
 <?php 
-    include 'includes/languageSession.inc.php';
+    include 'includes/translator.inc.php';
 ?>
 <html lang="en">
     <head>
@@ -14,8 +14,9 @@ author: René Schwab
     <body>
         <nav>
             <div class="nav-link"><a href="#"><?php echo $lang['home']?></a></div>
-            <div class="nav-link"><a href="#"><?php echo $lang['profile']?></a></div>
+            <div class="nav-link"><a href="userprofile.php"><?php echo $lang['profile']?></a></div>
             <div class="nav-link"><a href="login.php"><?php echo $lang['login']?></a></div>
+            <div class="nav-link"><a href="logout.php"><?php echo $lang['logout']?></a></div>
         </nav>
         <footer>
             <div class="footer lang"><a href="index.php?lang=en"><?php echo $lang['english']?></a></div>

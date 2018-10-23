@@ -19,7 +19,7 @@ Author: Philipp Lehmann
     if($count == 1) {
         $_SESSION['login_user'] = $myusername;
 
-        header("location: index.php");
+        header("location: userprofile.php");
     }else {
         echo "
             <script type=\"text/javascript\">
