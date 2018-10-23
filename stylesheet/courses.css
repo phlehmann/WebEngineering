@@ -3,3 +3,7 @@ body,td {font-family:Verdana; font-size:10pt;
 a:link       {color:#636363}
 a:visited    {color:#636363}
 a:hover      {color:#636363; background-color:#a3a3a3}
+
+.text{
+    width: 100px;
+}

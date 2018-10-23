@@ -30,7 +30,6 @@
                           <th>Bildungsinstitut</th>
                           <th>Fachbereich</th>
                           <th>Abschluss</th>
-                          <th><a href="create.php" class="btn btn-success"><img border='0' alt='edit' src='images/add.png' height='20' width='20'></a></th>
                         </tr>
                       </thead>
                       <tbody>
@@ -41,7 +40,7 @@
                        while ($row = mysqli_fetch_assoc($result)) {
                                 $id = $row["ID"];
                                 echo "\n\n<tr>"
-                                . "<td><input name='id[$id]' value='" . $row['ID'] . "' size='8' /></td>"
+                                . "<td><input class='text' name='id[$id]' value='" . $row['ID'] . "' size='8' /></td>"
                                 . "<td><input name='bezeichnung[$id]' value='" . $row['Bezeichnung'] . "' size='6' /></td>"
                                 . "<td><input name='kosten[$id]' value='" . $row['Kosten'] . "' size='6' /></td>"
                                 . "<td><input name='max_teilnehmerzahl[$id]' value='" . $row['Max_Teilnehmerzahl'] . "' size='6' /></td>"
@@ -51,10 +50,11 @@
                                 . "<td><input name='bildungsinstitut[$id]' value='" . $row['FK_Bildungsinstitut'] . "' size='10' /></td>"
                                 . "<td><input name='fachbereich[$id]' value='" . $row['FK_Fachbereich'] . "' size='10' /></td>"
                                 . "<td><input name='abschluss[$id]' value='" . $row['FK_Abschluss'] . "' size='10' /></td>"
-                                . "<td><a class='btn btn-success' href='coursesUpdate.php?id='".$id."'><img border='0' alt='edit' src='images/edit.png' height='20' width='20'></a>"
-                                . "<a class='btn btn-danger' href='coursesDelete.php?id='".$id."'><img border='0' alt='edit' src='images/delete.jpg' height='20' width='20'></a></td>"
+                                . "<td><a class='btn btn-success' href='coursesUpdate.php?id='".$id."'><img border='0' alt='edit' src='images/edit.png' height='20' width='20' align='top'></a>"
+                                . "<a class='btn btn-danger' href='coursesDelete.php?id='".$id."'><img border='0' alt='edit' src='images/delete.jpg' height='20' width='20' align='top'></a></td>"
                                 . "</tr>";
                        }
+                       echo "<tr><td valign='middle'><a href='create.php' class='btn btn-success'><img border='0' alt='edit' src='images/add.png' height='20' width='20' align='top'>add new course</a></td></tr>";
                       ?>
                       </tbody>
                 </table>
