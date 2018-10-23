@@ -21,6 +21,10 @@ URL: https://www.youtube.com/watch?v=cgvDMUrQ3vA
         "educationalInstitute" => "Bildungsinstitut",
         "areaOfStudies" => "Fachbereich",
         "graduation" => "Abschluss",
-        "addCourse" => "Kurs hinzufügen"
+        "addCourse" => "Kurs hinzufügen",
+        "sureDelete" => "Sind sie sicher?",
+        "yes" => "Ja",
+        "no" => "Nein",
+        "deleteCourse" => "Kurs löschen"
     );  
 ?>

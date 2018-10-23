@@ -1,4 +1,7 @@
-<?php   
+<?php  
+    include 'includes/languageSession.inc.php';
+    include("includes/DBconnection.inc.php");
+    
     if ( !empty($_GET['id'])) {
         $id = $_REQUEST['id'];
     }
@@ -8,7 +11,6 @@
         $id = $_POST['id'];
          
         // delete data
-        include("includes/DBconnection.inc.php");
         mysqli_query($conn, "SET NAMES 'utf8'"); // ä, ö, ü richtig darstellen
         $update = "DELETE FROM bildungsangebot  WHERE ID = ".$id;
         mysqli_query($conn, "DELETE FROM bildungsangebot  WHERE ID = ".$id);
@@ -31,15 +33,15 @@
      
                 <div class="span10 offset1">
                     <div class="row">
-                        <h3>Delete a course</h3>
+                        <h3><?php echo $lang['deleteCourse']?></h3>
                     </div>
                      
                     <form class="form-horizontal" action="coursesDelete.php" method="post">
                       <input type="hidden" name="id" value="<?php echo $id;?>"/>
-                      <p class="alert alert-error">Are you sure to delete ?</p>
+                      <p class="alert alert-error"><?php echo $lang['sureDelete']?></p>
                       <div class="form-actions">
-                          <button type="submit" class="button">Yes</button>
-                          <a class="button" href="courses.php">No</a>
+                          <button type="submit" class="button"><?php echo $lang['yes']?></button>
+                          <a class="button" href="courses.php"><?php echo $lang['no']?></a>
                         </div>
                     </form>
                 </div>

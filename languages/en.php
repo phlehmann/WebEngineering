@@ -21,6 +21,11 @@ URL: https://www.youtube.com/watch?v=cgvDMUrQ3vA
         "educationalInstitute" => "Educational Institute",
         "areaOfStudies" => "Area of studies",
         "graduation" => "Graduation",
-        "addCourse" => "Add new course"
+        "addCourse" => "Add new course",
+        "sureDelete" => "Are you sure to delete?",
+        "yes" => "Yes",
+        "no" => "No",
+        "deleteCourse" => "Delete a course"
+        
     );  
 ?>
