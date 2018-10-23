@@ -1,5 +1,5 @@
 <?php  
-    include 'includes/languageSession.inc.php';
+    include 'includes/translator.inc.php';
     include("includes/DBconnection.inc.php");
     
     if ( !empty($_GET['id'])) {
