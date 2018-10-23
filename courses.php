@@ -36,14 +36,12 @@
         td8.innerHTML = "<input class='text' name='bildungsinstitut[lastRow+1]' size='10'>";
         td9.innerHTML = "<input class='text' name='fachbereich[lastRow+1]' size='10'>";
         td10.innerHTML = "<input class='text' name='abschluss[lastRow+1]' size='10'>";
-        td11.innerHTML = "<a class='ok' href='javascript:send(0);'><img border='0' alt='ok' src='images/ok.png' height='20' width='20' align='top'></a><a class='cancel' href='#'><img border='0' alt='cancel' src='images/cancel.png' height='20' width='20' align='top'></a>";
+        td11.innerHTML = "<a class='ok' href='courses.php?insert=true'><img border='0' alt='ok' src='images/ok.png' height='20' width='20' align='top'></a><a class='cancel' href='javascript:deleteRow("+lastRow+");'><img border='0' alt='cancel' src='images/cancel.png' height='20' width='20' align='top'></a>";
     }
     
-    function send(action){
-        if(action == 0){
-            document.f.ak.value = "in";
-        }
-            
+    function deleteRow(actualRow){
+        var tbl = document.getElementById("crudTable");
+        tbl.deleteRow(actualRow);
     }
 </script>
 </head>
@@ -53,7 +51,8 @@
             <div class="row">
                 <h3><?php echo $lang['myCourses']?></h3>
             </div>
-            <div class="row">              
+            <div class="row">
+                <form method="get">
                 <table id="crudTable">
                       <thead>
                         <tr>
@@ -92,32 +91,20 @@
                        }
                        echo "<tr><td valign='middle' colspan='3'><a id='addLink' href='javascript:addRow()'><img class='add' border='0' alt='edit' src='images/add.png' height='20' width='20' align='top'>".$lang['addCourse']."</a></td></tr>";
                        
-                       /* neu eintragen */
-                       echo "<input name='ak' type='hidden' />";
-                       if($_POST["ak"]=="in"){
+                       if (isset($_GET['insert'])){
                             //einfügen
                             $lastRow = 0;
-                            while ($row = mysql_fetch_array($result)){
+                            while ($row = mysqli_fetch_array($result)){
                                    $lastRow++;
+                                   echo $lastRow;
                             }
-                            $insert = "INSERT INTO bildungsangebot"
-                             . "(`Bezeichnung`, `Kosten`, `Max_Teilnehmerzahl`,"
-                             . " `Startdatum`, `Enddatum`, `Ort`, `FK_Bildungsinstitut`,"
-                             . " `FK_Fachbereich`, `FK_Abschluss`) VALUES ('', '"
-                             . $_POST["bezeichnung"][$lastRow] . "', '"
-                             . $_POST["kosten"][$lastRow] . "', '"
-                             . $_POST["max_teilnehmerzahl"][$lastRow] . "', '"
-                             . $_POST["startdatum"][$lastRow] . "', '"
-                             . $_POST["enddatum"][$lastRow] . "', '"
-                             . $_POST["ort"][$lastRow] . "', '"
-                             . $_POST["bildungsinstitut"][$lastRow] . "', '"
-                             . $_POST["fachbereich"][$lastRow] . "', '"
-                             . $_POST["abschluss"][$lastRow] . "')";
-                             mysqli_query($conn, $insert);
                        }
+                       
+                       
                       ?>
                       </tbody>
                 </table>
+                </form>
         </div>
     </div> <!-- /container -->
 </body>
