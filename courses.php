@@ -10,39 +10,6 @@
   <link rel="stylesheet" type="text/css" href="stylesheet/courses.css">
 
 <script type="text/javascript">
-    //Zeile hinzufügen
-    function addRow(){
-        var tbl = document.getElementById("crudTable");
-    	var lastRow = tbl.rows.length-1;
-    	var tr = tbl.insertRow(lastRow);  
-    	var td1 = tr.insertCell(0);
-        var td2 = tr.insertCell(1);
-        var td3 = tr.insertCell(2);
-        var td4 = tr.insertCell(3);
-        var td5 = tr.insertCell(4);
-        var td6 = tr.insertCell(5);
-        var td7 = tr.insertCell(6);
-        var td8 = tr.insertCell(7);
-        var td9 = tr.insertCell(8);
-        var td10 = tr.insertCell(9);
-        var td11 = tr.insertCell(10);
-    	td1.innerHTML = "<input class='text' name='id[lastRow+1]' size='8'>";
-        td2.innerHTML = "<input class='text' name='bezeichnung[lastRow+1]' size='6'>";
-        td3.innerHTML = "<input class='text' name='kosten[lastRow+1]' size='6'>";
-        td4.innerHTML = "<input class='text' name='max_teilnehmerzahl[lastRow+1]' size='6'>";
-        td5.innerHTML = "<input class='text' name='startdatum[lastRow+1]' size='10'>";
-        td6.innerHTML = "<input class='text' name='enddatum[lastRow+1]' size='10'>";
-        td7.innerHTML = "<input class='text' name='ort[lastRow+1]' size='10'>";
-        td8.innerHTML = "<input class='text' name='bildungsinstitut[lastRow+1]' size='10'>";
-        td9.innerHTML = "<input class='text' name='fachbereich[lastRow+1]' size='10'>";
-        td10.innerHTML = "<input class='text' name='abschluss[lastRow+1]' size='10'>";
-        td11.innerHTML = "<a class='ok' href='courses.php?insert=true'><img border='0' alt='ok' src='images/ok.png' height='20' width='20' align='top'></a><a class='cancel' href='javascript:deleteRow("+lastRow+");'><img border='0' alt='cancel' src='images/cancel.png' height='20' width='20' align='top'></a>";
-    }
-    
-    function deleteRow(actualRow){
-        var tbl = document.getElementById("crudTable");
-        tbl.deleteRow(actualRow);
-    }
 </script>
 </head>
 
@@ -52,7 +19,7 @@
                 <h3><?php echo $lang['myCourses']?></h3>
             </div>
             <div class="row">
-                <form method="get">
+                <form method="post">
                 <table id="crudTable">
                       <thead>
                         <tr>
@@ -89,7 +56,7 @@
                                 . "<a class='delete' href='coursesDelete.php?id=".$id."'><img border='0' alt='delete' src='images/delete.png' height='20' width='20' align='top'></a></td>"
                                 . "</tr>";
                        }
-                       echo "<tr><td valign='middle' colspan='3'><a id='addLink' href='javascript:addRow()'><img class='add' border='0' alt='edit' src='images/add.png' height='20' width='20' align='top'>".$lang['addCourse']."</a></td></tr>";
+                       echo "<tr><td valign='middle' colspan='3'><a id='addLink' href='coursesInsert.php'><img class='add' border='0' alt='edit' src='images/add.png' height='20' width='20' align='top'>".$lang['addCourse']."</a></td></tr>";
                        
                        if (isset($_GET['insert'])){
                             //einfügen
