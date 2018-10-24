@@ -12,9 +12,8 @@
          
         // delete data
         mysqli_query($conn, "SET NAMES 'utf8'"); // ä, ö, ü richtig darstellen
-        $update = "DELETE FROM bildungsangebot  WHERE ID = ".$id;
+        $delete = "DELETE FROM bildungsangebot  WHERE ID = ".$id;
         mysqli_query($conn, "DELETE FROM bildungsangebot  WHERE ID = ".$id);
-        echo $id;
         header("Location: courses.php");
     }
     
