@@ -59,13 +59,65 @@
 <h1>YOUR COMPONENTS:</h1>
 
 
+<!-- Accordion -->
+<h2 class="demoHeaders">Accordion</h2>
+<div id="accordion">
+	<h3>First</h3>
+	<div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+	<h3>Second</h3>
+	<div>Phasellus mattis tincidunt nibh.</div>
+	<h3>Third</h3>
+	<div>Nam dui erat, auctor a, dignissim quis.</div>
+</div>
 
 
 
 
 
+<!-- Button -->
+<h2 class="demoHeaders">Button</h2>
+<button id="button">A button element</button>
+<button id="button-icon">An icon-only button</button>
 
 
+
+<!-- Checkboxradio -->
+<h2 class="demoHeaders">Checkboxradio</h2>
+<form style="margin-top: 1em;">
+	<div id="radioset">
+		<input type="radio" id="radio1" name="radio"><label for="radio1">Choice 1</label>
+		<input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Choice 2</label>
+		<input type="radio" id="radio3" name="radio"><label for="radio3">Choice 3</label>
+	</div>
+</form>
+
+
+
+<!-- Controlgroup -->
+<h2 class="demoHeaders">Controlgroup</h2>
+<fieldset>
+	<legend>Rental Car</legend>
+	<div id="controlgroup">
+		<select id="car-type">
+			<option>Compact car</option>
+			<option>Midsize car</option>
+			<option>Full size car</option>
+			<option>SUV</option>
+			<option>Luxury</option>
+			<option>Truck</option>
+			<option>Van</option>
+		</select>
+		<label for="transmission-standard">Standard</label>
+		<input type="radio" name="transmission" id="transmission-standard">
+		<label for="transmission-automatic">Automatic</label>
+		<input type="radio" name="transmission" id="transmission-automatic">
+		<label for="insurance">Insurance</label>
+		<input type="checkbox" name="insurance" id="insurance">
+		<label for="horizontal-spinner" class="ui-controlgroup-label"># of cars</label>
+		<input id="horizontal-spinner" class="ui-spinner-input">
+		<button>Book Now!</button>
+	</div>
+</fieldset>
 
 
 
@@ -253,41 +305,17 @@
 
 
 
-
-
-
-
-<!-- Progressbar -->
-<h2 class="demoHeaders">Selectmenu</h2>
-<select id="selectmenu">
-	<option>Slower</option>
-	<option>Slow</option>
-	<option selected="selected">Medium</option>
-	<option>Fast</option>
-	<option>Faster</option>
-</select>
+<!-- Datepicker -->
+<h2 class="demoHeaders">Datepicker</h2>
+<div id="datepicker"></div>
 
 
 
 
 
-<!-- Menu -->
-<h2 class="demoHeaders">Menu</h2>
-<ul style="width:100px;" id="menu">
-	<li><div>Item 1</div></li>
-	<li><div>Item 2</div></li>
-	<li><div>Item 3</div>
-		<ul>
-			<li><div>Item 3-1</div></li>
-			<li><div>Item 3-2</div></li>
-			<li><div>Item 3-3</div></li>
-			<li><div>Item 3-4</div></li>
-			<li><div>Item 3-5</div></li>
-		</ul>
-	</li>
-	<li><div>Item 4</div></li>
-	<li><div>Item 5</div></li>
-</ul>
+
+
+
 
 
 
@@ -312,6 +340,35 @@
 <script src="jquery-ui.js"></script>
 <script>
 
+$( "#accordion" ).accordion();
+
+
+
+
+
+$( "#button" ).button();
+$( "#button-icon" ).button({
+	icon: "ui-icon-gear",
+	showLabel: false
+});
+
+
+
+$( "#radioset" ).buttonset();
+
+
+
+$( "#controlgroup" ).controlgroup();
+
+
+
+
+
+
+
+$( "#datepicker" ).datepicker({
+	inline: true
+});
 
 
 
@@ -324,23 +381,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-$( "#menu" ).menu();
-
-
-
-
-
-$( "#selectmenu" ).selectmenu();
 
 
 // Hover states on the static widgets

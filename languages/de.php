@@ -9,6 +9,7 @@ URL: https://www.youtube.com/watch?v=cgvDMUrQ3vA
         "profile" => "Profil",
         "login" => "Anmelden",
         "logout" => "Abmelden",
+        "register" => "Registrieren",
         "english" => "En",
         "german" => "De",
         "myCourses" => "Meine Kurse",
