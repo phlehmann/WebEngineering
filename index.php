@@ -32,13 +32,13 @@ Source: https://www.w3schools.com/howto/howto_js_filter_table.asp
                 }       
               }
             }
-            </script>
+        </script>
     </head>
     <body>
         <nav>
             <a href="#"><div class="nav-link"><?php echo $lang['home']?></div></a>
             <a href="userprofile.php"><div class="nav-link"><?php echo $lang['profile']?></div></a>
-            <a href="registration.php.php"><div class="nav-link"><?php echo $lang['register']?></div></a>
+            <a href="registration.php"><div class="nav-link"><?php echo $lang['register']?></div></a>
             <a href="logout.php"><div class="nav-link"><?php echo $lang['logout']?></div></a>
         </nav>
         <div id="searcharea">

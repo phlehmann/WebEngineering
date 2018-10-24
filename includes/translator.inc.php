@@ -14,7 +14,7 @@ Source 2: https://www.w3schools.com/php/func_http_setcookie.asp
             setcookie($cookie_name, 'en', time() + (86400 * 30), '/');
         header("Refresh:0");
         }else if($_GET['lang'] == "de"){
-                setcookie($cookie_name, 'de', time() + (86400 * 30), '/');
+            setcookie($cookie_name, 'de', time() + (86400 * 30), '/');
             header("Refresh:0");
         }
     }

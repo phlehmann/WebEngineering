@@ -24,7 +24,6 @@
 <head>
     <meta charset="utf-8">
      <link rel="stylesheet" type="text/css" href="stylesheet/courses.css">
-    <script src="js/bootstrap.min.js"></script>
 </head>
  
 <body>
