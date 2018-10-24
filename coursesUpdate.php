@@ -57,9 +57,42 @@ include("includes/DBconnection.inc.php");
                 . "<tr><td>Startdatum</td><td><input type='date' name='startdatum' value='" . $startdatum . "' /></td></tr>"
                 . "<tr><td>Enddatum</td><td><input type='date' name='enddatum' value='" . $enddatum . "' /></td></tr>"
                 . "<tr><td>Ort</td><td><input type='text' name='ort' value='" . $ort . "' /></td></tr>"
-                . "<tr><td>Bildungsinstitut</td><td><input type='text' name='bildungsinstitut' value='" . $bildungsinstitut . "' /></td></tr>"
-                . "<tr><td>Fachbereich</td><td><input type='text' name='fachbereich' value='" . $fachbereich . "' /></td></tr>"
-                . "<tr><td>Abschluss</td><td><input type='text' name='abschluss' value='" . $abschluss . "' /></td></tr>"
+                . "<tr><td>Bildungsinstitut</td><td><select name='bildungsinstitut' maxlength='40'>"
+                            ."<option selected value='".$bildungsinstitut."'>".$bildungsinstitut."</option>";
+                            $select = "Select DISTINCT ID, Name from bildungsinstitut";
+                            if(mysqli_query($conn, $select)){
+                                $result = mysqli_query($conn, $select);
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    $id = $row["ID"];
+                                    $name = $row["Name"];
+                                    echo '<option value="'.$id.'">'.$name.'</option>';
+                                }
+                            }
+                echo "</select></td></tr>"
+                . "<tr><td>Fachbereich</td><td><select name='fachbereich' maxlength='40'>"
+                        ."<option selected value='".$fachbereich."'>".$fachbereich."</option>";
+                            $select = "Select DISTINCT ID, Bezeichnung from Fachbereich";
+                            if(mysqli_query($conn, $select)){
+                                $result = mysqli_query($conn, $select);
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    $id = $row["ID"];
+                                    $name = $row["Bezeichnung"];
+                                    echo '<option value="'.$id.'">'.$name.'</option>';
+                                }
+                            }
+                echo "</select></td></tr>"
+                . "<tr><td>Abschluss</td><td><select name='abschluss' maxlength='40'>"
+                            ."<option selected value='".$abschluss."'>".$abschluss."</option>";
+                            $select = "Select DISTINCT ID, Bezeichnung from abschluss";
+                            if(mysqli_query($conn, $select)){
+                                $result = mysqli_query($conn, $select);
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    $id = $row["ID"];
+                                    $name = $row["Bezeichnung"];
+                                    echo '<option value="'.$id.'">'.$name.'</option>';
+                                }
+                            }
+                echo "</select></td></tr>"
                 . "<tr><td><input type='submit' name'btnSubmit' value='Speichern'></td><td><input type='reset' name'btnReset' value='Reset'></td></tr>";
                 ?>
             </table>
