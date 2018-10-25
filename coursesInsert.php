@@ -6,7 +6,7 @@
 <html>
     <head>
 		<meta charset="UTF-8">
-		<title>Kurs einfügen</title>
+		<title><?php echo $lang['addCourse']?></title>
 		<link rel="stylesheet" type="text/css" href="css.inc.css">
     </head>
     <body>
@@ -37,8 +37,8 @@
 	}
 	?>
     
-	<h3> Kurs einfügen </h3>
-	<form action="coursesInsert.php" method="post"> <!--action= Umgebungsvariable für variablen Dateinamen-->
+	<h3><?php echo $lang['addCourse']?> </h3>
+	<form action="coursesInsert.php" method="post">
 
 	<table border="0">
 		<tr>
@@ -49,31 +49,31 @@
                         echo $data['Auto_increment'];?>" disabled></td>
 		</tr>
 		<tr>
-			<td>Bezeichnung </td>
+			<td><?php echo $lang['label']?> </td>
 			<td><input type="text" name="bezeichnung" size="30" maxlength="40"></td>
 		</tr>
 		<tr>
-			<td>Kosten </td>
+			<td><?php echo $lang['costs']?> </td>
 			<td><input type="text" name="kosten" size="30" maxlength="40"></td>
 		</tr>
 		<tr>
-			<td>Teilnehmerzahl </td>
+			<td><?php echo $lang['attendance']?> </td>
 			<td><input type="text" name="max_teilnehmerzahl" size="30" maxlength="40"></td>
 		</tr>
 		<tr>
-			<td>Startdatum </td>
+			<td><?php echo $lang['startingDate']?> </td>
 			<td><input type="date" name="startdatum" size="30" maxlength="40"></td>
 		</tr>
 		<tr>
-			<td>Enddatum </td>
+			<td><?php echo $lang['endDate']?> </td>
 			<td><input type="date" name="enddatum" size="30" maxlength="40"></td>
 		</tr>
                 <tr>
-			<td>Ort </td>
+			<td><?php echo $lang['place']?> </td>
 			<td><input type="text" name="ort" size="30" maxlength="40"></td>
 		</tr>
                 <tr>
-			<td>Bildungsinstitut </td>
+			<td><?php echo $lang['educationalInstitute']?> </td>
                         <td><select name="bildungsinstitut" maxlength="40">
                             <option disabled selected value></option><?php 
                             $select = "Select ID, Name from bildungsinstitut";
@@ -88,7 +88,7 @@
                         ?></select></td>
 		</tr>
                 <tr>
-			<td>Fachbereich </td>
+			<td><?php echo $lang['areaOfStudies']?> </td>
 			<td><select name="fachbereich" maxlength="40">
                             <option disabled selected value></option><?php 
                             $select = "Select ID, Bezeichnung from fachbereich";
@@ -103,7 +103,7 @@
                         ?><</select></td>
 		</tr>
                 <tr>
-			<td>Abschluss </td>
+			<td><?php echo $lang['graduation']?> </td>
                         <td><select name="abschluss" maxlength="40">
                             <option disabled selected value></option><?php 
                             $select = "Select ID, Bezeichnung from abschluss";
@@ -119,8 +119,8 @@
 		</tr>
 	</table>
 	<br/>
-        <input type="Submit" name="save" value="Speichern"/>
-	<input type="reset" name="reset" value="Zurücksetzen"/>
+        <input type="Submit" name="save" value="<?php echo $lang['save']?>"/>
+        <input type="button" name="cancel" value="<?php echo $lang['cancel']?>" onclick="location.href='courses.php'"/>
 	</form>
 	<br/>
    </body>   

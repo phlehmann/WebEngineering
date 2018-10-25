@@ -26,7 +26,14 @@ URL: https://www.youtube.com/watch?v=cgvDMUrQ3vA
         "sureDelete" => "Are you sure to delete?",
         "yes" => "Yes",
         "no" => "No",
-        "deleteCourse" => "Delete a course"
-        
+        "deleteCourse" => "Delete a course",
+        "save" => "Save",
+        "cancel" => "Cancel",
+        "userprofile" => "Userprofile",
+        "editCourse" => "Edit course",
+        "name" => "Name",
+        "street" => "Street address",
+        "postCode" => "Post code",
+        "email" => "Email"
     );  
 ?>

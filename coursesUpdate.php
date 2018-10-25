@@ -11,10 +11,10 @@ include("includes/DBconnection.inc.php");
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="userprofile.css">
         <link rel="stylesheet" type="text/css" href="all.css">
-        <title>Benutzerkonto</title>
+        <title><?php echo $lang['editCourse']?></title>
     </head>
     <body>
-        <h3>Benutzerprofil</h3>
+        <h3><?php echo $lang['editCourse']?></h3>
         <form action="coursesUpdate.php" method="post">
             <table>
                 <?php
@@ -51,13 +51,13 @@ include("includes/DBconnection.inc.php");
 
                 //Formular anzeigen und mit Daten füllen
                 echo "<tr><td>ID</td><td><input type='text' name='id' value='" . $id . "' /></td></tr>"
-                . "<tr><td>Bezeichnung</td><td><input type='text' name='bezeichnung' value='" . $bezeichnung . "' /></td></tr>"
-                . "<tr><td>Kosten</td><td><input type='text' name='kosten' value='" . $kosten . "' /></td></tr>"
-                . "<tr><td>Teilnehmerzahl</td><td><input type='text' name='max_teilnehmerzahl' value='" . $teilnehmerzahl . "' /></td></tr>"
-                . "<tr><td>Startdatum</td><td><input type='date' name='startdatum' value='" . $startdatum . "' /></td></tr>"
-                . "<tr><td>Enddatum</td><td><input type='date' name='enddatum' value='" . $enddatum . "' /></td></tr>"
-                . "<tr><td>Ort</td><td><input type='text' name='ort' value='" . $ort . "' /></td></tr>"
-                . "<tr><td>Bildungsinstitut</td><td><select name='bildungsinstitut' maxlength='40'>"
+                . "<tr><td>"; echo $lang['label'] . "</td><td><input type='text' name='bezeichnung' value='" . $bezeichnung . "' /></td></tr>"
+                . "<tr><td>"; echo $lang['costs'] . "</td><td><input type='text' name='kosten' value='" . $kosten . "' /></td></tr>"
+                . "<tr><td>"; echo $lang['attendance'] . "</td><td><input type='text' name='max_teilnehmerzahl' value='" . $teilnehmerzahl . "' /></td></tr>"
+                . "<tr><td>"; echo $lang['startingDate'] . "</td><td><input type='date' name='startdatum' value='" . $startdatum . "' /></td></tr>"
+                . "<tr><td>"; echo $lang['endDate'] . "</td><td><input type='date' name='enddatum' value='" . $enddatum . "' /></td></tr>"
+                . "<tr><td>"; echo $lang['place'] . "</td><td><input type='text' name='ort' value='" . $ort . "' /></td></tr>"
+                . "<tr><td>"; echo $lang['educationalInstitute'] . "</td><td><select name='bildungsinstitut' maxlength='40'>"
                             ."<option selected value='".$bildungsinstitut."'>".$bildungsinstitut."</option>";
                             $select = "Select DISTINCT ID, Name from bildungsinstitut";
                             if(mysqli_query($conn, $select)){
@@ -69,7 +69,7 @@ include("includes/DBconnection.inc.php");
                                 }
                             }
                 echo "</select></td></tr>"
-                . "<tr><td>Fachbereich</td><td><select name='fachbereich' maxlength='40'>"
+                . "<tr><td>"; echo $lang['areaOfStudies'] . "</td><td><select name='fachbereich' maxlength='40'>"
                         ."<option selected value='".$fachbereich."'>".$fachbereich."</option>";
                             $select = "Select DISTINCT ID, Bezeichnung from Fachbereich";
                             if(mysqli_query($conn, $select)){
@@ -81,7 +81,7 @@ include("includes/DBconnection.inc.php");
                                 }
                             }
                 echo "</select></td></tr>"
-                . "<tr><td>Abschluss</td><td><select name='abschluss' maxlength='40'>"
+                . "<tr><td>"; echo $lang['graduation'] . "</td><td><select name='abschluss' maxlength='40'>"
                             ."<option selected value='".$abschluss."'>".$abschluss."</option>";
                             $select = "Select DISTINCT ID, Bezeichnung from abschluss";
                             if(mysqli_query($conn, $select)){
@@ -93,7 +93,7 @@ include("includes/DBconnection.inc.php");
                                 }
                             }
                 echo "</select></td></tr>"
-                . "<tr><td><input type='submit' name'btnSubmit' value='Speichern'></td><td><input type='reset' name'btnReset' value='Reset'></td></tr>";
+                . "<tr><td><input type='submit' name'save' value='"; echo $lang['save'] . "'></td><td><input type='button' name'cancel' value='"; echo $lang['cancel'] . "' onclick='location.href='courses.php''></td></tr>";
                 ?>
             </table>
         </form>

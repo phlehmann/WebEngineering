@@ -11,10 +11,10 @@ include("includes/DBconnection.inc.php");
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="userprofile.css">
         <link rel="stylesheet" type="text/css" href="all.css">
-        <title>Benutzerkonto</title>
+        <title><?php echo $lang['userprofile']?></title>
     </head>
     <body>
-        <h3>Benutzerprofil</h3>
+        <h3><?php echo $lang['userprofile']?></h3>
         <form action="userprofile.php" method="post">
             <table>
                 <?php
@@ -45,12 +45,12 @@ include("includes/DBconnection.inc.php");
 
                 //Formular anzeigen und mit Daten füllen
              echo "<tr><td>ID</td><td><input type='text' name='id' value='".$id."' /></td></tr>"
-            ."<tr><td>Name</td><td><input type='text' name='name' value='".$name."' /></td></tr>"
-            ."<tr><td>Strasse</td><td><input type='text' name='strasse' value='".$strasse."' /></td></tr>"
-            ."<tr><td>Ort</td><td><input type='text' name='ort' value='".$ort."' /></td></tr>"
-            ."<tr><td>PLZ</td><td><input type='text' name='plz' value='".$plz."' /></td></tr>"
-            ."<tr><td>Email</td><td><input type='text' name='email' value='".$email."' /></td></tr>"
-            ."<tr><td><input type='submit' name'btnSubmit' value='Speichern'></td><td><input type='reset' name'btnReset' value='Reset'></td></tr>";
+            ."<tr><td>"; echo $lang['name'] . "</td><td><input type='text' name='name' value='".$name."' /></td></tr>"
+            ."<tr><td>"; echo $lang['street'] . "</td><td><input type='text' name='strasse' value='".$strasse."' /></td></tr>"
+            ."<tr><td>"; echo $lang['place'] . "</td><td><input type='text' name='ort' value='".$ort."' /></td></tr>"
+            ."<tr><td>"; echo $lang['postCode'] . "</td><td><input type='text' name='plz' value='".$plz."' /></td></tr>"
+            ."<tr><td>"; echo $lang['email'] . "</td><td><input type='text' name='email' value='".$email."' /></td></tr>"
+            ."<tr><td><input type='submit' name'save' value='"; echo $lang['save'] . "'></td><td><input type='button' name'cancel' value='"; echo $lang['cancel'] . "' onclick='location.href='index.php''></td></tr>";
                 ?>
             </table>
         </form>
