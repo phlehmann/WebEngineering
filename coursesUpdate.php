@@ -34,7 +34,7 @@ include("includes/DBconnection.inc.php");
                 }
                 //Query
                 $select = "Select ID, Bezeichnung, Kosten, Max_Teilnehmerzahl, Startdatum, Enddatum, Ort, FK_Bildungsinstitut, FK_Fachbereich, FK_Abschluss from bildungsangebot where ID = '$id'"; //Just 4 Tests
-                //$sql = "Select ID, Name, Strasse, Ort, Postleitzahl from bildungsinstitut where FK_email = '$myusername'"; //Im Einsatz
+               
                 //Ausführen
                 $result = mysqli_query($conn, $select);
                 $row = mysqli_fetch_array($result);
